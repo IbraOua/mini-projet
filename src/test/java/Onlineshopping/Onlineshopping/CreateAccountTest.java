@@ -48,7 +48,7 @@ public void testCreateAccount() throws InterruptedException {
 
         
 
-        String username = "asddjejn" ;
+        String username = "asdjhghejn" ;
         String email = username + "@example.com";
         String password = "Test@1234";
 
@@ -61,8 +61,9 @@ public void testCreateAccount() throws InterruptedException {
         WebElement userMenu = driver.findElement(By.id("menuUserLink"));
         String displayedUsername = userMenu.getText();
 
-        Assert.assertEquals(displayedUsername.contains(username), "Le nom d'utilisateur affiché ne correspond pas.");
-    }
+    
+        Assert.assertEquals(username, displayedUsername , "Le nom d'utilisateur affiché ne correspond pas.");
+}
 
 
 
